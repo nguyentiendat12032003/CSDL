@@ -9,11 +9,13 @@ Bảng "Học sinh":
 - Ngày sinh (birthday)
 - SĐT (phone_number)
 - Giới tính (gender)
+
 Bảng "Lớp học":
 - Mã lớp học (class_id)
 - Mã giáo viên (teacher_id)
 - Mã chương trình (program_id)
 - Năm học (academic_year)
+
 Bảng "Giáo viên":
 - Mã giáo viên (teacher_id)
 - Tên giáo viên (teacher_name)
