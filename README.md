@@ -1,4 +1,6 @@
-# Đặc tả hệ thống quản lý học sinh
+# Lab 4: https://docs.google.com/document/d/1kvc7Jrt3Y2hlFNf48-6ZaJtzwMrR7g56/edit?usp=sharing&ouid=102737524994634007634&rtpof=true&sd=true
+
+# Đặc Tả Quản Lý Doanh Số Sản Phẩm và Đơn Đặt Hàng Của Công Ty ABC
 Công ty ABC cần giám sát số lượng sản phẩm trong kho của mình. Hệ thống cần lưu trữ thông tin về các sản phẩm, bao gồm mã sản phẩm, tên sản phẩm, số lượng tồn kho, và vị trí lưu trữ trong kho. Mỗi sản phẩm sẽ có một mã sản phẩm duy nhất và không được trùng lặp.
 
 Cuối kỳ, công ty ABC cần kiểm đếm thông tin về doanh số bán hàng của mỗi nhân viên. Hệ thống cần theo dõi các đơn đặt hàng, bao gồm thông tin về mã đơn hàng, tên khách hàng, ngày đặt hàng, và số lượng sản phẩm trong đơn hàng. Mỗi đơn hàng sẽ được gán một mã đơn hàng duy nhất và không được trùng lặp. Hệ thống cũng cần lưu trữ thông tin về nhân viên, bao gồm mã nhân viên, tên nhân viên, và mức lương.
@@ -26,6 +28,8 @@ Bảng "Nhân Viên" (Employee):
 - Mã Nhân Viên (Employee ID): Mã duy nhất định danh cho mỗi nhân viên.
 - Tên Nhân Viên (Employee Name): Tên của nhân viên.
 - Mức Lương (Salary): Mức lương của nhân viên.
+
+# Mô hình ERD:https://app.diagrams.net/#G10UruruOu5oerjQpg2g79HrNFxxlK95QY#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
 
 # Mối quan hệ và tính ràng buộc giữa các bảng
 Mối quan hệ tính ràng buộc giữa các bảng dữ liệu trong hệ thống quản lý học sinh được mô tả như sau:
