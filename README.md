@@ -1,7 +1,10 @@
 # Đặc tả hệ thống quản lý học sinh
 Công ty ABC cần giám sát số lượng sản phẩm trong kho của mình. Hệ thống cần lưu trữ thông tin về các sản phẩm, bao gồm mã sản phẩm, tên sản phẩm, số lượng tồn kho, và vị trí lưu trữ trong kho. Mỗi sản phẩm sẽ có một mã sản phẩm duy nhất và không được trùng lặp.
+
 Cuối kỳ, công ty ABC cần kiểm đếm thông tin về doanh số bán hàng của mỗi nhân viên. Hệ thống cần theo dõi các đơn đặt hàng, bao gồm thông tin về mã đơn hàng, tên khách hàng, ngày đặt hàng, và số lượng sản phẩm trong đơn hàng. Mỗi đơn hàng sẽ được gán một mã đơn hàng duy nhất và không được trùng lặp. Hệ thống cũng cần lưu trữ thông tin về nhân viên, bao gồm mã nhân viên, tên nhân viên, và mức lương.
+
 Ngoài ra, hệ thống cần có khả năng liên kết thông tin giữa các bảng dữ liệu. Ví dụ, mỗi đơn hàng sẽ liên kết với một mã sản phẩm và một mã nhân viên. Hệ thống cũng cần theo dõi lịch sử các đơn đặt hàng và số lượng sản phẩm tồn kho theo thời gian để giúp công ty ABC dự đoán và quản lý tốt hơn việc tồn kho và doanh số bán hàng.
+
 Yêu cầu trên đề xuất một cơ sở dữ liệu bao gồm ít nhất ba bảng: Bảng "Sản Phẩm" (Product), Bảng "Đơn Đặt Hàng" (Order), và Bảng "Nhân Viên" (Employee). Các bảng này sẽ có các trường tương ứng để lưu trữ thông tin theo yêu cầu của công ty ABC và sẽ có khóa chính để đảm bảo tính duy nhất và ràng buộc dữ liệu.
 
 # Thiết kế bảng dữ liệu
