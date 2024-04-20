@@ -31,16 +31,20 @@ Bảng "Nhân Viên" (Employee):
 Mối quan hệ tính ràng buộc giữa các bảng dữ liệu trong hệ thống quản lý học sinh được mô tả như sau:
 
 Bảng "Sản Phẩm" (Product) và Bảng "Đơn Đặt Hàng" (Order):
+
 Mỗi đơn đặt hàng sẽ liên kết với một hoặc nhiều sản phẩm trong bảng "Đơn Đặt Hàng" thông qua trường "Mã Sản Phẩm" (Product ID).
 Mối quan hệ này là một-nhiều (one-to-many), vì mỗi đơn đặt hàng có thể chứa nhiều sản phẩm khác nhau.
 
 Bảng "Nhân Viên" (Employee) và Bảng "Đơn Đặt Hàng" (Order):
+
 Mỗi đơn đặt hàng sẽ được gán cho một nhân viên trong bảng "Đơn Đặt Hàng" thông qua trường "Mã Nhân Viên" (Employee ID).
 Mỗi nhân viên có thể có nhiều đơn đặt hàng, vì vậy mối quan hệ này cũng là một-nhiều (one-to-many).
 
 Sự liên kết giữa các bảng:
+
 Mỗi đơn đặt hàng có thông tin về sản phẩm và nhân viên tương ứng thông qua các trường "Mã Sản Phẩm" và "Mã Nhân Viên".
 Điều này cho phép hệ thống kết nối dữ liệu giữa các bảng để truy vấn thông tin liên quan, chẳng hạn như thông tin về đơn đặt hàng, sản phẩm, và nhân viên liên quan đến mỗi đơn hàng cụ thể.
+
 Với các mối quan hệ này, hệ thống có thể hiệu quả theo dõi thông tin về sản phẩm, đơn đặt hàng và nhân viên, và cung cấp các báo cáo và phân tích liên quan đến doanh số bán hàng và quản lý tồn kho.
 
 
