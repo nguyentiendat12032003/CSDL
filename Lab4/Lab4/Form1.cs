@@ -17,6 +17,9 @@ namespace Lab4
             InitializeComponent();
         }
 
-   
+        private void btn_add_product_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
