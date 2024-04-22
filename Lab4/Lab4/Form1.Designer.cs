@@ -45,7 +45,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_capnhat_order = new System.Windows.Forms.Button();
             this.btn_xoa_order = new System.Windows.Forms.Button();
-            this.txt_date = new System.Windows.Forms.TextBox();
             this.btn_them_order = new System.Windows.Forms.Button();
             this.txt_quantity = new System.Windows.Forms.TextBox();
             this.txt_customername = new System.Windows.Forms.TextBox();
@@ -61,8 +60,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.btn_capnhat_employee = new System.Windows.Forms.Button();
             this.txt_salary = new System.Windows.Forms.TextBox();
             this.btn_xoa_employee = new System.Windows.Forms.Button();
@@ -72,6 +69,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dtp_orderdate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -216,9 +216,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.dtp_orderdate);
             this.groupBox3.Controls.Add(this.btn_capnhat_order);
             this.groupBox3.Controls.Add(this.btn_xoa_order);
-            this.groupBox3.Controls.Add(this.txt_date);
             this.groupBox3.Controls.Add(this.btn_them_order);
             this.groupBox3.Controls.Add(this.txt_quantity);
             this.groupBox3.Controls.Add(this.txt_customername);
@@ -255,13 +255,6 @@
             this.btn_xoa_order.TabIndex = 26;
             this.btn_xoa_order.Text = "Xóa";
             this.btn_xoa_order.UseVisualStyleBackColor = true;
-            // 
-            // txt_date
-            // 
-            this.txt_date.Location = new System.Drawing.Point(179, 172);
-            this.txt_date.Name = "txt_date";
-            this.txt_date.Size = new System.Drawing.Size(208, 22);
-            this.txt_date.TabIndex = 35;
             // 
             // btn_them_order
             // 
@@ -399,26 +392,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Employee";
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.dataGridView3);
-            this.groupBox6.Location = new System.Drawing.Point(848, 245);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(384, 204);
-            this.groupBox6.TabIndex = 7;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Thông tin chi tiết";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 22);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(384, 182);
-            this.dataGridView3.TabIndex = 0;
-            // 
             // btn_capnhat_employee
             // 
             this.btn_capnhat_employee.Location = new System.Drawing.Point(257, 184);
@@ -494,6 +467,34 @@
             this.label13.TabIndex = 30;
             this.label13.Text = "Employee_Name:";
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.dataGridView3);
+            this.groupBox6.Location = new System.Drawing.Point(848, 245);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(384, 204);
+            this.groupBox6.TabIndex = 7;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Thông tin chi tiết";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(0, 22);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(384, 182);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // dtp_orderdate
+            // 
+            this.dtp_orderdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_orderdate.Location = new System.Drawing.Point(179, 172);
+            this.dtp_orderdate.Name = "dtp_orderdate";
+            this.dtp_orderdate.Size = new System.Drawing.Size(208, 22);
+            this.dtp_orderdate.TabIndex = 35;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -541,7 +542,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btn_capnhat_order;
         private System.Windows.Forms.Button btn_xoa_order;
-        private System.Windows.Forms.TextBox txt_date;
         private System.Windows.Forms.Button btn_them_order;
         private System.Windows.Forms.TextBox txt_quantity;
         private System.Windows.Forms.TextBox txt_customername;
@@ -568,6 +568,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DateTimePicker dtp_orderdate;
     }
 }
 
