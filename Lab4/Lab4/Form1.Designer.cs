@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_luu_product = new System.Windows.Forms.Button();
             this.btn_capnhat_product = new System.Windows.Forms.Button();
             this.btn_xoa_product = new System.Windows.Forms.Button();
             this.btn_them_product = new System.Windows.Forms.Button();
@@ -41,8 +42,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dgv2 = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btn_luu_employee = new System.Windows.Forms.Button();
+            this.btn_capnhat_employee = new System.Windows.Forms.Button();
+            this.txt_salary = new System.Windows.Forms.TextBox();
+            this.btn_xoa_employee = new System.Windows.Forms.Button();
+            this.btn_them_employee = new System.Windows.Forms.Button();
+            this.txt_employeename = new System.Windows.Forms.TextBox();
+            this.txt_employeeid = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dgv3 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_luu_order = new System.Windows.Forms.Button();
             this.dtp_orderdate = new System.Windows.Forms.DateTimePicker();
             this.btn_capnhat_order = new System.Windows.Forms.Button();
             this.btn_xoa_order = new System.Windows.Forms.Button();
@@ -58,37 +75,20 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btn_capnhat_employee = new System.Windows.Forms.Button();
-            this.txt_salary = new System.Windows.Forms.TextBox();
-            this.btn_xoa_employee = new System.Windows.Forms.Button();
-            this.btn_them_employee = new System.Windows.Forms.Button();
-            this.txt_employeename = new System.Windows.Forms.TextBox();
-            this.txt_employeeid = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv3)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_luu_product);
             this.groupBox1.Controls.Add(this.btn_capnhat_product);
             this.groupBox1.Controls.Add(this.btn_xoa_product);
             this.groupBox1.Controls.Add(this.btn_them_product);
@@ -107,27 +107,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product";
             // 
+            // btn_luu_product
+            // 
+            this.btn_luu_product.Location = new System.Drawing.Point(320, 186);
+            this.btn_luu_product.Name = "btn_luu_product";
+            this.btn_luu_product.Size = new System.Drawing.Size(75, 23);
+            this.btn_luu_product.TabIndex = 23;
+            this.btn_luu_product.Text = "Lưu";
+            this.btn_luu_product.UseVisualStyleBackColor = true;
+            this.btn_luu_product.Click += new System.EventHandler(this.btn_luu_product_Click);
+            // 
             // btn_capnhat_product
             // 
-            this.btn_capnhat_product.Location = new System.Drawing.Point(283, 189);
+            this.btn_capnhat_product.Location = new System.Drawing.Point(191, 187);
             this.btn_capnhat_product.Name = "btn_capnhat_product";
-            this.btn_capnhat_product.Size = new System.Drawing.Size(75, 23);
+            this.btn_capnhat_product.Size = new System.Drawing.Size(103, 23);
             this.btn_capnhat_product.TabIndex = 22;
             this.btn_capnhat_product.Text = "Cập nhật";
             this.btn_capnhat_product.UseVisualStyleBackColor = true;
+            this.btn_capnhat_product.Click += new System.EventHandler(this.btn_capnhat_product_Click);
             // 
             // btn_xoa_product
             // 
-            this.btn_xoa_product.Location = new System.Drawing.Point(186, 189);
+            this.btn_xoa_product.Location = new System.Drawing.Point(104, 186);
             this.btn_xoa_product.Name = "btn_xoa_product";
             this.btn_xoa_product.Size = new System.Drawing.Size(75, 23);
             this.btn_xoa_product.TabIndex = 21;
             this.btn_xoa_product.Text = "Xóa";
             this.btn_xoa_product.UseVisualStyleBackColor = true;
+            this.btn_xoa_product.Click += new System.EventHandler(this.btn_xoa_product_Click);
             // 
             // btn_them_product
             // 
-            this.btn_them_product.Location = new System.Drawing.Point(89, 189);
+            this.btn_them_product.Location = new System.Drawing.Point(13, 187);
             this.btn_them_product.Name = "btn_them_product";
             this.btn_them_product.Size = new System.Drawing.Size(75, 23);
             this.btn_them_product.TabIndex = 20;
@@ -201,31 +213,170 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(13, 245);
+            this.groupBox2.Controls.Add(this.dgv1);
+            this.groupBox2.Location = new System.Drawing.Point(431, 20);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(411, 204);
+            this.groupBox2.Size = new System.Drawing.Size(689, 219);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết ";
             // 
-            // dataGridView1
+            // dgv1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(411, 192);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Location = new System.Drawing.Point(-1, 22);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.RowHeadersWidth = 51;
+            this.dgv1.RowTemplate.Height = 24;
+            this.dgv1.Size = new System.Drawing.Size(688, 197);
+            this.dgv1.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dgv2);
+            this.groupBox4.Location = new System.Drawing.Point(431, 245);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(687, 227);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Thông tin chi tiết";
+            // 
+            // dgv2
+            // 
+            this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv2.Location = new System.Drawing.Point(0, 21);
+            this.dgv2.Name = "dgv2";
+            this.dgv2.RowHeadersWidth = 51;
+            this.dgv2.RowTemplate.Height = 24;
+            this.dgv2.Size = new System.Drawing.Size(689, 206);
+            this.dgv2.TabIndex = 0;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btn_luu_employee);
+            this.groupBox5.Controls.Add(this.btn_capnhat_employee);
+            this.groupBox5.Controls.Add(this.txt_salary);
+            this.groupBox5.Controls.Add(this.btn_xoa_employee);
+            this.groupBox5.Controls.Add(this.btn_them_employee);
+            this.groupBox5.Controls.Add(this.txt_employeename);
+            this.groupBox5.Controls.Add(this.txt_employeeid);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Location = new System.Drawing.Point(12, 478);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(412, 211);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Employee";
+            // 
+            // btn_luu_employee
+            // 
+            this.btn_luu_employee.Location = new System.Drawing.Point(320, 157);
+            this.btn_luu_employee.Name = "btn_luu_employee";
+            this.btn_luu_employee.Size = new System.Drawing.Size(75, 23);
+            this.btn_luu_employee.TabIndex = 35;
+            this.btn_luu_employee.Text = "Lưu";
+            this.btn_luu_employee.UseVisualStyleBackColor = true;
+            // 
+            // btn_capnhat_employee
+            // 
+            this.btn_capnhat_employee.Location = new System.Drawing.Point(191, 157);
+            this.btn_capnhat_employee.Name = "btn_capnhat_employee";
+            this.btn_capnhat_employee.Size = new System.Drawing.Size(103, 23);
+            this.btn_capnhat_employee.TabIndex = 31;
+            this.btn_capnhat_employee.Text = "Cập nhật";
+            this.btn_capnhat_employee.UseVisualStyleBackColor = true;
+            // 
+            // txt_salary
+            // 
+            this.txt_salary.Location = new System.Drawing.Point(160, 116);
+            this.txt_salary.Name = "txt_salary";
+            this.txt_salary.Size = new System.Drawing.Size(208, 22);
+            this.txt_salary.TabIndex = 34;
+            // 
+            // btn_xoa_employee
+            // 
+            this.btn_xoa_employee.Location = new System.Drawing.Point(104, 157);
+            this.btn_xoa_employee.Name = "btn_xoa_employee";
+            this.btn_xoa_employee.Size = new System.Drawing.Size(75, 23);
+            this.btn_xoa_employee.TabIndex = 29;
+            this.btn_xoa_employee.Text = "Xóa";
+            this.btn_xoa_employee.UseVisualStyleBackColor = true;
+            // 
+            // btn_them_employee
+            // 
+            this.btn_them_employee.Location = new System.Drawing.Point(16, 157);
+            this.btn_them_employee.Name = "btn_them_employee";
+            this.btn_them_employee.Size = new System.Drawing.Size(75, 23);
+            this.btn_them_employee.TabIndex = 26;
+            this.btn_them_employee.Text = "Thêm";
+            this.btn_them_employee.UseVisualStyleBackColor = true;
+            // 
+            // txt_employeename
+            // 
+            this.txt_employeename.Location = new System.Drawing.Point(160, 85);
+            this.txt_employeename.Name = "txt_employeename";
+            this.txt_employeename.Size = new System.Drawing.Size(208, 22);
+            this.txt_employeename.TabIndex = 33;
+            // 
+            // txt_employeeid
+            // 
+            this.txt_employeeid.Location = new System.Drawing.Point(160, 57);
+            this.txt_employeeid.Name = "txt_employeeid";
+            this.txt_employeeid.Size = new System.Drawing.Size(208, 22);
+            this.txt_employeeid.TabIndex = 27;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 60);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 16);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Employee_ID:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 116);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 16);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Salary:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 88);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(116, 16);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Employee_Name:";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.dgv3);
+            this.groupBox6.Location = new System.Drawing.Point(431, 480);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(687, 209);
+            this.groupBox6.TabIndex = 7;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Thông tin chi tiết";
+            // 
+            // dgv3
+            // 
+            this.dgv3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv3.Location = new System.Drawing.Point(0, 22);
+            this.dgv3.Name = "dgv3";
+            this.dgv3.RowHeadersWidth = 51;
+            this.dgv3.RowTemplate.Height = 24;
+            this.dgv3.Size = new System.Drawing.Size(687, 187);
+            this.dgv3.TabIndex = 0;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btn_luu_order);
             this.groupBox3.Controls.Add(this.dtp_orderdate);
             this.groupBox3.Controls.Add(this.btn_capnhat_order);
             this.groupBox3.Controls.Add(this.btn_xoa_order);
@@ -241,12 +392,21 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(431, 12);
+            this.groupBox3.Location = new System.Drawing.Point(12, 245);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(410, 227);
-            this.groupBox3.TabIndex = 4;
+            this.groupBox3.Size = new System.Drawing.Size(413, 227);
+            this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Order";
+            // 
+            // btn_luu_order
+            // 
+            this.btn_luu_order.Location = new System.Drawing.Point(320, 204);
+            this.btn_luu_order.Name = "btn_luu_order";
+            this.btn_luu_order.Size = new System.Drawing.Size(75, 23);
+            this.btn_luu_order.TabIndex = 24;
+            this.btn_luu_order.Text = "Lưu";
+            this.btn_luu_order.UseVisualStyleBackColor = true;
             // 
             // dtp_orderdate
             // 
@@ -258,16 +418,16 @@
             // 
             // btn_capnhat_order
             // 
-            this.btn_capnhat_order.Location = new System.Drawing.Point(261, 200);
+            this.btn_capnhat_order.Location = new System.Drawing.Point(191, 198);
             this.btn_capnhat_order.Name = "btn_capnhat_order";
-            this.btn_capnhat_order.Size = new System.Drawing.Size(75, 23);
+            this.btn_capnhat_order.Size = new System.Drawing.Size(103, 23);
             this.btn_capnhat_order.TabIndex = 28;
             this.btn_capnhat_order.Text = "Cập nhật";
             this.btn_capnhat_order.UseVisualStyleBackColor = true;
             // 
             // btn_xoa_order
             // 
-            this.btn_xoa_order.Location = new System.Drawing.Point(164, 200);
+            this.btn_xoa_order.Location = new System.Drawing.Point(105, 198);
             this.btn_xoa_order.Name = "btn_xoa_order";
             this.btn_xoa_order.Size = new System.Drawing.Size(75, 23);
             this.btn_xoa_order.TabIndex = 26;
@@ -276,7 +436,7 @@
             // 
             // btn_them_order
             // 
-            this.btn_them_order.Location = new System.Drawing.Point(67, 200);
+            this.btn_them_order.Location = new System.Drawing.Point(14, 198);
             this.btn_them_order.Name = "btn_them_order";
             this.btn_them_order.Size = new System.Drawing.Size(75, 23);
             this.btn_them_order.TabIndex = 24;
@@ -372,192 +532,32 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Product_ID:";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.dataGridView2);
-            this.groupBox4.Location = new System.Drawing.Point(431, 245);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(410, 204);
-            this.groupBox4.TabIndex = 5;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin chi tiết";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 22);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(410, 192);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.btn_capnhat_employee);
-            this.groupBox5.Controls.Add(this.txt_salary);
-            this.groupBox5.Controls.Add(this.btn_xoa_employee);
-            this.groupBox5.Controls.Add(this.btn_them_employee);
-            this.groupBox5.Controls.Add(this.txt_employeename);
-            this.groupBox5.Controls.Add(this.txt_employeeid);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Location = new System.Drawing.Point(848, 12);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(384, 227);
-            this.groupBox5.TabIndex = 6;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Employee";
-            // 
-            // btn_capnhat_employee
-            // 
-            this.btn_capnhat_employee.Location = new System.Drawing.Point(257, 184);
-            this.btn_capnhat_employee.Name = "btn_capnhat_employee";
-            this.btn_capnhat_employee.Size = new System.Drawing.Size(75, 23);
-            this.btn_capnhat_employee.TabIndex = 31;
-            this.btn_capnhat_employee.Text = "Cập nhật";
-            this.btn_capnhat_employee.UseVisualStyleBackColor = true;
-            // 
-            // txt_salary
-            // 
-            this.txt_salary.Location = new System.Drawing.Point(160, 116);
-            this.txt_salary.Name = "txt_salary";
-            this.txt_salary.Size = new System.Drawing.Size(208, 22);
-            this.txt_salary.TabIndex = 34;
-            // 
-            // btn_xoa_employee
-            // 
-            this.btn_xoa_employee.Location = new System.Drawing.Point(160, 184);
-            this.btn_xoa_employee.Name = "btn_xoa_employee";
-            this.btn_xoa_employee.Size = new System.Drawing.Size(75, 23);
-            this.btn_xoa_employee.TabIndex = 29;
-            this.btn_xoa_employee.Text = "Xóa";
-            this.btn_xoa_employee.UseVisualStyleBackColor = true;
-            // 
-            // btn_them_employee
-            // 
-            this.btn_them_employee.Location = new System.Drawing.Point(63, 184);
-            this.btn_them_employee.Name = "btn_them_employee";
-            this.btn_them_employee.Size = new System.Drawing.Size(75, 23);
-            this.btn_them_employee.TabIndex = 26;
-            this.btn_them_employee.Text = "Thêm";
-            this.btn_them_employee.UseVisualStyleBackColor = true;
-            // 
-            // txt_employeename
-            // 
-            this.txt_employeename.Location = new System.Drawing.Point(160, 85);
-            this.txt_employeename.Name = "txt_employeename";
-            this.txt_employeename.Size = new System.Drawing.Size(208, 22);
-            this.txt_employeename.TabIndex = 33;
-            // 
-            // txt_employeeid
-            // 
-            this.txt_employeeid.Location = new System.Drawing.Point(160, 57);
-            this.txt_employeeid.Name = "txt_employeeid";
-            this.txt_employeeid.Size = new System.Drawing.Size(208, 22);
-            this.txt_employeeid.TabIndex = 27;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 60);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 16);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Employee_ID:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(17, 116);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 16);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Salary:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 88);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(116, 16);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "Employee_Name:";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.dataGridView3);
-            this.groupBox6.Location = new System.Drawing.Point(848, 245);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(384, 204);
-            this.groupBox6.TabIndex = 7;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Thông tin chi tiết";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 22);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(384, 182);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 35;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 80;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số lượng";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 50;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Vị trí";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 459);
+            this.ClientSize = new System.Drawing.Size(1130, 696);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Lab 4";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv3)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -576,8 +576,23 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridView dgv2;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btn_capnhat_employee;
+        private System.Windows.Forms.TextBox txt_salary;
+        private System.Windows.Forms.Button btn_xoa_employee;
+        private System.Windows.Forms.Button btn_them_employee;
+        private System.Windows.Forms.TextBox txt_employeename;
+        private System.Windows.Forms.TextBox txt_employeeid;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.DataGridView dgv3;
+        private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DateTimePicker dtp_orderdate;
         private System.Windows.Forms.Button btn_capnhat_order;
         private System.Windows.Forms.Button btn_xoa_order;
         private System.Windows.Forms.Button btn_them_order;
@@ -592,25 +607,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button btn_capnhat_employee;
-        private System.Windows.Forms.TextBox txt_salary;
-        private System.Windows.Forms.Button btn_xoa_employee;
-        private System.Windows.Forms.Button btn_them_employee;
-        private System.Windows.Forms.TextBox txt_employeename;
-        private System.Windows.Forms.TextBox txt_employeeid;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DateTimePicker dtp_orderdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btn_luu_product;
+        private System.Windows.Forms.Button btn_luu_employee;
+        private System.Windows.Forms.Button btn_luu_order;
     }
 }
 
