@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_luu_product = new System.Windows.Forms.Button();
             this.btn_capnhat_product = new System.Windows.Forms.Button();
             this.btn_xoa_product = new System.Windows.Forms.Button();
             this.btn_them_product = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_luu_order = new System.Windows.Forms.Button();
             this.dtp_orderdate = new System.Windows.Forms.DateTimePicker();
             this.btn_capnhat_order = new System.Windows.Forms.Button();
             this.btn_xoa_order = new System.Windows.Forms.Button();
@@ -61,6 +63,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgv2 = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btn_luu_employee = new System.Windows.Forms.Button();
             this.btn_capnhat_employee = new System.Windows.Forms.Button();
             this.txt_salary = new System.Windows.Forms.TextBox();
             this.btn_xoa_employee = new System.Windows.Forms.Button();
@@ -72,9 +75,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgv3 = new System.Windows.Forms.DataGridView();
-            this.btn_luu_product = new System.Windows.Forms.Button();
-            this.btn_luu_order = new System.Windows.Forms.Button();
-            this.btn_luu_employee = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -106,6 +106,16 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product";
+            // 
+            // btn_luu_product
+            // 
+            this.btn_luu_product.Location = new System.Drawing.Point(322, 191);
+            this.btn_luu_product.Name = "btn_luu_product";
+            this.btn_luu_product.Size = new System.Drawing.Size(75, 23);
+            this.btn_luu_product.TabIndex = 23;
+            this.btn_luu_product.Text = "Lưu";
+            this.btn_luu_product.UseVisualStyleBackColor = true;
+            this.btn_luu_product.Click += new System.EventHandler(this.btn_luu_product_Click);
             // 
             // btn_capnhat_product
             // 
@@ -219,6 +229,7 @@
             this.dgv1.RowTemplate.Height = 24;
             this.dgv1.Size = new System.Drawing.Size(748, 192);
             this.dgv1.TabIndex = 0;
+            this.dgv1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellClick);
             // 
             // groupBox3
             // 
@@ -244,6 +255,15 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Order";
+            // 
+            // btn_luu_order
+            // 
+            this.btn_luu_order.Location = new System.Drawing.Point(322, 198);
+            this.btn_luu_order.Name = "btn_luu_order";
+            this.btn_luu_order.Size = new System.Drawing.Size(75, 23);
+            this.btn_luu_order.TabIndex = 24;
+            this.btn_luu_order.Text = "Lưu";
+            this.btn_luu_order.UseVisualStyleBackColor = true;
             // 
             // dtp_orderdate
             // 
@@ -408,6 +428,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Employee";
             // 
+            // btn_luu_employee
+            // 
+            this.btn_luu_employee.Location = new System.Drawing.Point(322, 157);
+            this.btn_luu_employee.Name = "btn_luu_employee";
+            this.btn_luu_employee.Size = new System.Drawing.Size(75, 23);
+            this.btn_luu_employee.TabIndex = 36;
+            this.btn_luu_employee.Text = "Lưu";
+            this.btn_luu_employee.UseVisualStyleBackColor = true;
+            // 
             // btn_capnhat_employee
             // 
             this.btn_capnhat_employee.Location = new System.Drawing.Point(207, 157);
@@ -502,34 +531,6 @@
             this.dgv3.RowTemplate.Height = 24;
             this.dgv3.Size = new System.Drawing.Size(748, 182);
             this.dgv3.TabIndex = 0;
-            // 
-            // btn_luu_product
-            // 
-            this.btn_luu_product.Location = new System.Drawing.Point(322, 191);
-            this.btn_luu_product.Name = "btn_luu_product";
-            this.btn_luu_product.Size = new System.Drawing.Size(75, 23);
-            this.btn_luu_product.TabIndex = 23;
-            this.btn_luu_product.Text = "Lưu";
-            this.btn_luu_product.UseVisualStyleBackColor = true;
-            this.btn_luu_product.Click += new System.EventHandler(this.btn_luu_product_Click);
-            // 
-            // btn_luu_order
-            // 
-            this.btn_luu_order.Location = new System.Drawing.Point(322, 198);
-            this.btn_luu_order.Name = "btn_luu_order";
-            this.btn_luu_order.Size = new System.Drawing.Size(75, 23);
-            this.btn_luu_order.TabIndex = 24;
-            this.btn_luu_order.Text = "Lưu";
-            this.btn_luu_order.UseVisualStyleBackColor = true;
-            // 
-            // btn_luu_employee
-            // 
-            this.btn_luu_employee.Location = new System.Drawing.Point(322, 157);
-            this.btn_luu_employee.Name = "btn_luu_employee";
-            this.btn_luu_employee.Size = new System.Drawing.Size(75, 23);
-            this.btn_luu_employee.TabIndex = 36;
-            this.btn_luu_employee.Text = "Lưu";
-            this.btn_luu_employee.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

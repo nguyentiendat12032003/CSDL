@@ -75,5 +75,17 @@ namespace Lab4
                 load();
             }
         }
+
+        private void dgv1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgv1.RowCount > 0 )
+            {
+                txt_productid.Text = dgv1[0,dgv1.CurrentRow.Index].Value.ToString();
+                txt_productid_order.Text = dgv1[0, dgv1.CurrentRow.Index].Value.ToString();
+                txt_productname.Text = dgv1[1, dgv1.CurrentRow.Index].Value.ToString();
+                txt_stockquantity.Text = dgv1[2, dgv1.CurrentRow.Index].Value.ToString();
+                txt_storagelocation.Text = dgv1[3, dgv1.CurrentRow.Index].Value.ToString();
+            }
+        }
     }
 }
