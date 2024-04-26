@@ -1,4 +1,4 @@
-﻿namespace Lab4
+
 {
     partial class Form1
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_luu_product = new System.Windows.Forms.Button();
             this.btn_capnhat_product = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_luu_order = new System.Windows.Forms.Button();
             this.dtp_orderdate = new System.Windows.Forms.DateTimePicker();
@@ -75,15 +77,14 @@
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgv3 = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv3)).BeginInit();
+
             this.SuspendLayout();
             // 
             // groupBox1
@@ -222,14 +223,14 @@
             // 
             // dgv1
             // 
-            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Location = new System.Drawing.Point(0, 22);
+
             this.dgv1.Name = "dgv1";
             this.dgv1.RowHeadersWidth = 51;
             this.dgv1.RowTemplate.Height = 24;
             this.dgv1.Size = new System.Drawing.Size(748, 192);
             this.dgv1.TabIndex = 0;
             this.dgv1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellClick);
+
             // 
             // groupBox3
             // 
@@ -436,6 +437,7 @@
             this.btn_luu_employee.TabIndex = 36;
             this.btn_luu_employee.Text = "Lưu";
             this.btn_luu_employee.UseVisualStyleBackColor = true;
+
             // 
             // btn_capnhat_employee
             // 
@@ -445,6 +447,7 @@
             this.btn_capnhat_employee.TabIndex = 31;
             this.btn_capnhat_employee.Text = "Cập nhật";
             this.btn_capnhat_employee.UseVisualStyleBackColor = true;
+
             // 
             // txt_salary
             // 
@@ -461,6 +464,7 @@
             this.btn_xoa_employee.TabIndex = 29;
             this.btn_xoa_employee.Text = "Xóa";
             this.btn_xoa_employee.UseVisualStyleBackColor = true;
+
             // 
             // btn_them_employee
             // 
@@ -470,6 +474,7 @@
             this.btn_them_employee.TabIndex = 26;
             this.btn_them_employee.Text = "Thêm";
             this.btn_them_employee.UseVisualStyleBackColor = true;
+
             // 
             // txt_employeename
             // 
@@ -525,12 +530,13 @@
             // dgv3
             // 
             this.dgv3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv3.Location = new System.Drawing.Point(0, 22);
+
             this.dgv3.Name = "dgv3";
             this.dgv3.RowHeadersWidth = 51;
             this.dgv3.RowTemplate.Height = 24;
             this.dgv3.Size = new System.Drawing.Size(748, 182);
             this.dgv3.TabIndex = 0;
+
             // 
             // Form1
             // 
@@ -550,6 +556,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
+
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -558,9 +565,11 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv3)).EndInit();
+
             this.ResumeLayout(false);
 
         }
+
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
@@ -610,6 +619,7 @@
         private System.Windows.Forms.Button btn_luu_product;
         private System.Windows.Forms.Button btn_luu_order;
         private System.Windows.Forms.Button btn_luu_employee;
+
     }
 }
 

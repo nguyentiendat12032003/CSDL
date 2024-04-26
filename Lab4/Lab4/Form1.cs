@@ -22,9 +22,11 @@ namespace Lab4
         {
             dgv1.DataSource = db.Products.ToList();
 
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+
             load();
         }
         private void btn_add_product_Click(object sender, EventArgs e)
@@ -87,5 +89,6 @@ namespace Lab4
                 txt_storagelocation.Text = dgv1[3, dgv1.CurrentRow.Index].Value.ToString();
             }
         }
+
     }
 }
