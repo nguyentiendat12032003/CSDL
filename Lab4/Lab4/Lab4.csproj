@@ -60,7 +60,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
+    <Compile Include="SQLQuery_ABCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQLQuery_ABCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLQuery_ABCDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQLQuery_ABCDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLQuery_ABCDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQLQuery_ABCDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLQuery_ABCDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQLQuery_ABCDataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,7 +109,50 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-
+    <None Include="SQLQuery_ABCDataSet.xsc">
+      <DependentUpon>SQLQuery_ABCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SQLQuery_ABCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SQLQuery_ABCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLQuery_ABCDataSet.xss">
+      <DependentUpon>SQLQuery_ABCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SQLQuery_ABCDataSet1.xsc">
+      <DependentUpon>SQLQuery_ABCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SQLQuery_ABCDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SQLQuery_ABCDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLQuery_ABCDataSet1.xss">
+      <DependentUpon>SQLQuery_ABCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SQLQuery_ABCDataSet2.xsc">
+      <DependentUpon>SQLQuery_ABCDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SQLQuery_ABCDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SQLQuery_ABCDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLQuery_ABCDataSet2.xss">
+      <DependentUpon>SQLQuery_ABCDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SQLQuery_ABCDataSet3.xsc">
+      <DependentUpon>SQLQuery_ABCDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SQLQuery_ABCDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SQLQuery_ABCDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SQLQuery_ABCDataSet3.xss">
+      <DependentUpon>SQLQuery_ABCDataSet3.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
