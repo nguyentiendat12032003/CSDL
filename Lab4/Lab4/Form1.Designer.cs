@@ -709,8 +709,9 @@ namespace Lab4
         private void dgv3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             throw new NotImplementedException();
-     
 
+        }
+         
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_capnhat_product;

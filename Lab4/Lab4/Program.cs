@@ -11,6 +11,8 @@ namespace Lab4
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+        //add git more
         [STAThread]
         static void Main()
         {
