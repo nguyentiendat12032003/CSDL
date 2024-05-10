@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,12 +21,20 @@ namespace Lab4
         private void load()
         {
             dgv1.DataSource = db.Products.ToList();
-
+            dgv2.DataSource = db.Orders.ToList();
+            dgv3.DataSource = db.Employees.ToList();
 
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'sQLQuery_ABCDataSet3.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter1.Fill(this.sQLQuery_ABCDataSet3.Employee);
+            // TODO: This line of code loads data into the 'sQLQuery_ABCDataSet2.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.sQLQuery_ABCDataSet2.Employee);
+            // TODO: This line of code loads data into the 'sQLQuery_ABCDataSet1.Order' table. You can move, or remove it, as needed.
+            this.orderTableAdapter.Fill(this.sQLQuery_ABCDataSet1.Order);
+            // TODO: This line of code loads data into the 'sQLQuery_ABCDataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.sQLQuery_ABCDataSet.Product);
             load();
         }
         private void btn_add_product_Click(object sender, EventArgs e)
@@ -91,7 +99,7 @@ namespace Lab4
             }
         }
 
-<<<<<<< HEAD
+
         private void btn_them_employee_Click(object sender, EventArgs e)
         {
             isthem = true;
@@ -102,8 +110,7 @@ namespace Lab4
             if (MessageBox.Show("Xóa nhen!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 var employee = db.Employees.Single(a => a.EmployeeID == int.Parse(txt_employeeid.Text));
-                db.Employees.DeleteOnSubmit(employee);
-  
+
                 db.SubmitChanges();
                 MessageBox.Show("Xóa được roài nè!");
                 load();
@@ -151,8 +158,6 @@ namespace Lab4
             }
         }
 
-
-=======
->>>>>>> 8cdec679cc09f173b7ab8a544360011ca1b5cf06
+    
     }
 }
