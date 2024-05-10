@@ -487,7 +487,7 @@ namespace Lab4
             this.dgv2.Size = new System.Drawing.Size(748, 192);
             this.dgv2.TabIndex = 0;
             this.dgv2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv2_CellContentClick);
-            // 
+            // git
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.btn_luu_employee);
