@@ -158,6 +158,86 @@ namespace Lab4
                 txt_salary.Text = dgv3[2, dgv3.CurrentRow.Index].Value.ToString();
             }
         }
-    
+
+        private void btn_them_order_Click(object sender, EventArgs e)
+        {
+            isthem = true;
+        }
+
+        private void btn_xoa_order_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Xóa nhen!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                var order = db.Orders.SingleOrDefault(a => a.OrderID == int.Parse(txt_orderid.Text));
+                if (order != null)
+                {
+                    db.Orders.DeleteOnSubmit(order);
+                    db.SubmitChanges();
+                    MessageBox.Show("Xóa được roài nè!");
+                    load();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy đơn hàng để xóa!");
+                }
+            }
+        }
+
+        private void btn_capnhat_order_Click(object sender, EventArgs e)
+        {
+            isthem = false;
+        }
+
+        private void btn_luu_order_Click(object sender, EventArgs e)
+        {
+            if (isthem)
+            {
+                Order order = new Order();
+                order.OrderID = int.Parse(txt_orderid.Text);
+                order.ProductID = int.Parse(txt_productid_order.Text);
+                order.EmployeeID = int.Parse(txt_employee_order.Text);
+                order.CustomerName = txt_customername.Text;
+                order.OrderDate = dtp_orderdate.Value;
+                order.Quantity = int.Parse(txt_quantity.Text);
+                db.Orders.InsertOnSubmit(order);
+                db.SubmitChanges();
+                MessageBox.Show("Thành công nha bạn ơi!");
+                load();
+            }
+            else
+            {
+                var order1 = db.Orders.SingleOrDefault(a => a.OrderID == int.Parse(txt_orderid.Text));
+                if (order1 != null)
+                {
+                    order1.ProductID = int.Parse(txt_productid_order.Text);
+                    order1.EmployeeID = int.Parse(txt_employee_order.Text);
+                    order1.CustomerName = txt_customername.Text;
+                    order1.OrderDate = dtp_orderdate.Value;
+                    order1.Quantity = int.Parse(txt_quantity.Text);
+                    db.SubmitChanges();
+                    MessageBox.Show("Thành công nè!");
+                    load();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy đơn hàng để cập nhật!");
+                }
+            }
+        }
+
+
+
+        private void dgv2_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv2.RowCount > 0)
+            {
+                txt_orderid.Text = dgv2[0, dgv2.CurrentRow.Index].Value.ToString();
+                txt_productid_order.Text = dgv2[1, dgv2.CurrentRow.Index].Value.ToString();
+                txt_employee_order.Text = dgv2[2, dgv2.CurrentRow.Index].Value.ToString();
+                txt_customername.Text = dgv2[3, dgv2.CurrentRow.Index].Value.ToString();
+                dtp_orderdate.Value = Convert.ToDateTime(dgv2[4, dgv2.CurrentRow.Index].Value);
+                txt_quantity.Text = dgv2[5, dgv2.CurrentRow.Index].Value.ToString();
+            }
+        }
     }
 }
