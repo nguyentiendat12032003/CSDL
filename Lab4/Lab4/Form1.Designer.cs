@@ -577,7 +577,7 @@ namespace Lab4
             this.label11.TabIndex = 28;
             this.label11.Text = "Employee_ID:";
             // 
-            // label12
+            // label12q
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(17, 116);
