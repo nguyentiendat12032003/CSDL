@@ -506,7 +506,7 @@ namespace Lab4
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Employee";
-            // 
+            // git add
             // btn_luu_employee
             // 
             this.btn_luu_employee.Location = new System.Drawing.Point(322, 157);
