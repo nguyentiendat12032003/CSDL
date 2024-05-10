@@ -567,7 +567,7 @@ namespace Lab4
             this.txt_employeeid.Name = "txt_employeeid";
             this.txt_employeeid.Size = new System.Drawing.Size(208, 22);
             this.txt_employeeid.TabIndex = 27;
-            // 
+            // s
             // label11
             // 
             this.label11.AutoSize = true;
