@@ -1,7 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
 
-namespace Lab4
 {
     partial class Form1
     {
@@ -31,7 +28,7 @@ namespace Lab4
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_luu_product = new System.Windows.Forms.Button();
             this.btn_capnhat_product = new System.Windows.Forms.Button();
@@ -47,12 +44,7 @@ namespace Lab4
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv1 = new System.Windows.Forms.DataGridView();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storageLocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sQLQuery_ABCDataSet = new Lab4.SQLQuery_ABCDataSet();
+
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_luu_order = new System.Windows.Forms.Button();
             this.dtp_orderdate = new System.Windows.Forms.DateTimePicker();
@@ -85,33 +77,14 @@ namespace Lab4
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgv3 = new System.Windows.Forms.DataGridView();
-            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sQLQuery_ABCDataSet3 = new Lab4.SQLQuery_ABCDataSet3();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sQLQuery_ABCDataSet2 = new Lab4.SQLQuery_ABCDataSet2();
-            this.productTableAdapter = new Lab4.SQLQuery_ABCDataSetTableAdapters.ProductTableAdapter();
-            this.sQLQuery_ABCDataSet1 = new Lab4.SQLQuery_ABCDataSet1();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderTableAdapter = new Lab4.SQLQuery_ABCDataSet1TableAdapters.OrderTableAdapter();
-            this.employeeTableAdapter = new Lab4.SQLQuery_ABCDataSet2TableAdapters.EmployeeTableAdapter();
-            this.employeeTableAdapter1 = new Lab4.SQLQuery_ABCDataSet3TableAdapters.EmployeeTableAdapter();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLQuery_ABCDataSet)).BeginInit();
+
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLQuery_ABCDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLQuery_ABCDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLQuery_ABCDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+
             this.SuspendLayout();
             // 
             // groupBox1
@@ -250,64 +223,14 @@ namespace Lab4
             // 
             // dgv1
             // 
-            this.dgv1.AutoGenerateColumns = false;
-            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productIDDataGridViewTextBoxColumn,
-            this.productNameDataGridViewTextBoxColumn,
-            this.stockQuantityDataGridViewTextBoxColumn,
-            this.storageLocationDataGridViewTextBoxColumn});
-            this.dgv1.DataSource = this.productBindingSource;
-            this.dgv1.Location = new System.Drawing.Point(1, 22);
+
             this.dgv1.Name = "dgv1";
             this.dgv1.RowHeadersWidth = 51;
             this.dgv1.RowTemplate.Height = 24;
             this.dgv1.Size = new System.Drawing.Size(748, 192);
             this.dgv1.TabIndex = 0;
             this.dgv1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellClick);
-            this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
-            this.productNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // stockQuantityDataGridViewTextBoxColumn
-            // 
-            this.stockQuantityDataGridViewTextBoxColumn.DataPropertyName = "StockQuantity";
-            this.stockQuantityDataGridViewTextBoxColumn.HeaderText = "StockQuantity";
-            this.stockQuantityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stockQuantityDataGridViewTextBoxColumn.Name = "stockQuantityDataGridViewTextBoxColumn";
-            this.stockQuantityDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // storageLocationDataGridViewTextBoxColumn
-            // 
-            this.storageLocationDataGridViewTextBoxColumn.DataPropertyName = "StorageLocation";
-            this.storageLocationDataGridViewTextBoxColumn.HeaderText = "StorageLocation";
-            this.storageLocationDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.storageLocationDataGridViewTextBoxColumn.Name = "storageLocationDataGridViewTextBoxColumn";
-            this.storageLocationDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-            this.productBindingSource.DataSource = this.sQLQuery_ABCDataSet;
-            // 
-            // sQLQuery_ABCDataSet
-            // 
-            this.sQLQuery_ABCDataSet.DataSetName = "SQLQuery_ABCDataSet";
-            this.sQLQuery_ABCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // groupBox3
             // 
@@ -515,7 +438,7 @@ namespace Lab4
             this.btn_luu_employee.TabIndex = 36;
             this.btn_luu_employee.Text = "Lưu";
             this.btn_luu_employee.UseVisualStyleBackColor = true;
-            this.btn_luu_employee.Click += new System.EventHandler(this.btn_luu_employee_Click);
+
             // 
             // btn_capnhat_employee
             // 
@@ -525,7 +448,7 @@ namespace Lab4
             this.btn_capnhat_employee.TabIndex = 31;
             this.btn_capnhat_employee.Text = "Cập nhật";
             this.btn_capnhat_employee.UseVisualStyleBackColor = true;
-            this.btn_capnhat_employee.Click += new System.EventHandler(this.btn_capnhat_employee_Click);
+
             // 
             // txt_salary
             // 
@@ -542,7 +465,7 @@ namespace Lab4
             this.btn_xoa_employee.TabIndex = 29;
             this.btn_xoa_employee.Text = "Xóa";
             this.btn_xoa_employee.UseVisualStyleBackColor = true;
-            this.btn_xoa_employee.Click += new System.EventHandler(this.btn_xoa_employee_Click);
+
             // 
             // btn_them_employee
             // 
@@ -552,7 +475,7 @@ namespace Lab4
             this.btn_them_employee.TabIndex = 26;
             this.btn_them_employee.Text = "Thêm";
             this.btn_them_employee.UseVisualStyleBackColor = true;
-            this.btn_them_employee.Click += new System.EventHandler(this.btn_them_employee_Click);
+
             // 
             // txt_employeename
             // 
@@ -608,59 +531,13 @@ namespace Lab4
             // dgv3
             // 
             this.dgv3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv3.Location = new System.Drawing.Point(0, 21);
+
             this.dgv3.Name = "dgv3";
             this.dgv3.RowHeadersWidth = 51;
             this.dgv3.RowTemplate.Height = 24;
             this.dgv3.Size = new System.Drawing.Size(748, 182);
             this.dgv3.TabIndex = 0;
-            this.dgv3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv3_CellClick);
-            // 
-            // employeeBindingSource1
-            // 
-            this.employeeBindingSource1.DataMember = "Employee";
-            this.employeeBindingSource1.DataSource = this.sQLQuery_ABCDataSet3;
-            // 
-            // sQLQuery_ABCDataSet3
-            // 
-            this.sQLQuery_ABCDataSet3.DataSetName = "SQLQuery_ABCDataSet3";
-            this.sQLQuery_ABCDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.sQLQuery_ABCDataSet2;
-            // 
-            // sQLQuery_ABCDataSet2
-            // 
-            this.sQLQuery_ABCDataSet2.DataSetName = "SQLQuery_ABCDataSet2";
-            this.sQLQuery_ABCDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
-            // 
-            // sQLQuery_ABCDataSet1
-            // 
-            this.sQLQuery_ABCDataSet1.DataSetName = "SQLQuery_ABCDataSet1";
-            this.sQLQuery_ABCDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataMember = "Order";
-            this.orderBindingSource.DataSource = this.sQLQuery_ABCDataSet1;
-            // 
-            // orderTableAdapter
-            // 
-            this.orderTableAdapter.ClearBeforeFill = true;
-            // 
-            // employeeTableAdapter
-            // 
-            this.employeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // employeeTableAdapter1
-            // 
-            this.employeeTableAdapter1.ClearBeforeFill = true;
+
             // 
             // Form1
             // 
@@ -680,8 +557,7 @@ namespace Lab4
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLQuery_ABCDataSet)).EndInit();
+
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -690,16 +566,12 @@ namespace Lab4
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLQuery_ABCDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLQuery_ABCDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sQLQuery_ABCDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+
             this.ResumeLayout(false);
 
         }
 
+<<<<<<< HEAD
       
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -710,6 +582,8 @@ namespace Lab4
         {
             throw new NotImplementedException();
         }
+=======
+>>>>>>> 8cdec679cc09f173b7ab8a544360011ca1b5cf06
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
@@ -759,22 +633,7 @@ namespace Lab4
         private System.Windows.Forms.Button btn_luu_product;
         private System.Windows.Forms.Button btn_luu_order;
         private System.Windows.Forms.Button btn_luu_employee;
-        private SQLQuery_ABCDataSet sQLQuery_ABCDataSet;
-        private System.Windows.Forms.BindingSource productBindingSource;
-        private SQLQuery_ABCDataSetTableAdapters.ProductTableAdapter productTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockQuantityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn storageLocationDataGridViewTextBoxColumn;
-        private SQLQuery_ABCDataSet1 sQLQuery_ABCDataSet1;
-        private System.Windows.Forms.BindingSource orderBindingSource;
-        private SQLQuery_ABCDataSet1TableAdapters.OrderTableAdapter orderTableAdapter;
-        private SQLQuery_ABCDataSet2 sQLQuery_ABCDataSet2;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
-        private SQLQuery_ABCDataSet2TableAdapters.EmployeeTableAdapter employeeTableAdapter;
-        private SQLQuery_ABCDataSet3 sQLQuery_ABCDataSet3;
-        private BindingSource employeeBindingSource1;
-        private SQLQuery_ABCDataSet3TableAdapters.EmployeeTableAdapter employeeTableAdapter1;
+
     }
 }
 
