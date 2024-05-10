@@ -562,7 +562,7 @@ namespace Lab4
             this.txt_employeename.TabIndex = 33;
             // asdf
             // txt_employeeid
-            // 
+            // aa
             this.txt_employeeid.Location = new System.Drawing.Point(160, 57);
             this.txt_employeeid.Name = "txt_employeeid";
             this.txt_employeeid.Size = new System.Drawing.Size(208, 22);
