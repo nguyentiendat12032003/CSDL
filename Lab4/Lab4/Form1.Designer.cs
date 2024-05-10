@@ -703,7 +703,6 @@ namespace Lab4
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            throw new NotImplementedException();
         }
 
         private void dgv3_CellContentClick(object sender, DataGridViewCellEventArgs e)

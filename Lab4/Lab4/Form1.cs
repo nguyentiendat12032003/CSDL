@@ -79,7 +79,9 @@ namespace Lab4
             if(MessageBox.Show("Xóa nhen!","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 var product = db.Products.Single(a => a.ProductID == int.Parse(txt_productid.Text));
+                var order = db.Orders.Single(a => a.ProductID == int.Parse(txt_productid.Text));
                 db.Products.DeleteOnSubmit(product);
+                db.Orders.DeleteOnSubmit(order);
                 db.SubmitChanges() ;
                 MessageBox.Show("Xóa được roài nè!");
                 load();
