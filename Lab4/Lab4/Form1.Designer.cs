@@ -466,7 +466,7 @@ namespace Lab4
             this.label7.Size = new System.Drawing.Size(76, 16);
             this.label7.TabIndex = 22;
             this.label7.Text = "Product_ID:";
-            // 
+            // add git more
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dgv2);
