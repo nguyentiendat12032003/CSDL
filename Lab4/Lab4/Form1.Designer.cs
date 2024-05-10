@@ -486,6 +486,7 @@ namespace Lab4
             this.dgv2.RowTemplate.Height = 24;
             this.dgv2.Size = new System.Drawing.Size(748, 192);
             this.dgv2.TabIndex = 0;
+            this.dgv2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv2_CellContentClick);
             // 
             // groupBox5
             // 

@@ -79,10 +79,10 @@ namespace Lab4
             if(MessageBox.Show("Xóa nhen!","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 var product = db.Products.Single(a => a.ProductID == int.Parse(txt_productid.Text));
-                var order = db.Orders.Single(a => a.ProductID == int.Parse(txt_productid.Text));
                 db.Products.DeleteOnSubmit(product);
-                db.Orders.DeleteOnSubmit(order);
-                db.SubmitChanges() ;
+                db.Products.DeleteOnSubmit(product);
+
+                db.SubmitChanges();
                 MessageBox.Show("Xóa được roài nè!");
                 load();
             }
@@ -93,7 +93,6 @@ namespace Lab4
             if(dgv1.RowCount > 0 )
             {
                 txt_productid.Text = dgv1[0,dgv1.CurrentRow.Index].Value.ToString();
-                txt_productid_order.Text = dgv1[0, dgv1.CurrentRow.Index].Value.ToString();
                 txt_productname.Text = dgv1[1, dgv1.CurrentRow.Index].Value.ToString();
                 txt_stockquantity.Text = dgv1[2, dgv1.CurrentRow.Index].Value.ToString();
                 txt_storagelocation.Text = dgv1[3, dgv1.CurrentRow.Index].Value.ToString();
@@ -110,10 +109,8 @@ namespace Lab4
             if (MessageBox.Show("Xóa nhen!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 var employee = db.Employees.Single(a => a.EmployeeID == int.Parse(txt_employeeid.Text));
-                var order = db.Orders.Single(a => a.EmployeeID == int.Parse(txt_employeeid.Text));
-
                 db.Employees.DeleteOnSubmit(employee);
-                db.Orders.DeleteOnSubmit(order);
+  
                 db.SubmitChanges();
                 MessageBox.Show("Xóa được roài nè!");
                 load();
@@ -160,6 +157,7 @@ namespace Lab4
                 txt_salary.Text = dgv3[2, dgv3.CurrentRow.Index].Value.ToString();
             }
         }
-    
+
+
     }
 }
