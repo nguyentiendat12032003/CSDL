@@ -486,6 +486,7 @@ namespace Lab4
             this.dgv2.RowTemplate.Height = 24;
             this.dgv2.Size = new System.Drawing.Size(748, 192);
             this.dgv2.TabIndex = 0;
+            this.dgv2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv2_CellContentClick);
             // 
             // groupBox5
             // 
@@ -699,17 +700,16 @@ namespace Lab4
 
         }
 
-      
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
         private void dgv3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             throw new NotImplementedException();
-        }
+     
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
