@@ -545,7 +545,7 @@ namespace Lab4
             this.btn_xoa_employee.Click += new System.EventHandler(this.btn_xoa_employee_Click);
             // 
             // btn_them_employee
-            // 
+            // add
             this.btn_them_employee.Location = new System.Drawing.Point(13, 157);
             this.btn_them_employee.Name = "btn_them_employee";
             this.btn_them_employee.Size = new System.Drawing.Size(75, 23);
