@@ -468,7 +468,7 @@ namespace Lab4
             this.label7.Text = "Product_ID:";
             // add git more
             // groupBox4
-            // 
+            // add git more 
             this.groupBox4.Controls.Add(this.dgv2);
             this.groupBox4.Location = new System.Drawing.Point(448, 245);
             this.groupBox4.Name = "groupBox4";
