@@ -18,27 +18,41 @@ Hệ thống bao gồm ba bảng chính: Products (Sản Phẩm), Orders (Đơn 
 2.1 Bảng Sản Phẩm (Products)
 
 Mục đích: Lưu trữ thông tin về các sản phẩm của công ty.
+
 ProductID (INT, PRIMARY KEY, AUTO_INCREMENT): Mã định danh duy nhất cho mỗi sản phẩm.
+
 ProductName (VARCHAR(255), NOT NULL): Tên sản phẩm.
+
 UnitPrice (DECIMAL(10, 2), NOT NULL): Giá mỗi đơn vị sản phẩm.
+
 Stock (INT, NOT NULL): Số lượng sản phẩm còn trong kho.
 
 2.2 Bảng Đơn Đặt Hàng (Orders)
 
 Mục đích: Lưu trữ thông tin về các đơn đặt hàng của khách hàng.
+
 OrderID (INT, PRIMARY KEY, AUTO_INCREMENT): Mã định danh duy nhất cho mỗi đơn đặt hàng.
+
 OrderDate (DATE, NOT NULL): Ngày đặt hàng.
+
 CustomerName (VARCHAR(255), NOT NULL): Tên khách hàng.
+
 CustomerAddress (VARCHAR(255), NOT NULL): Địa chỉ khách hàng.
 
 2.3 Bảng Chi Tiết Đơn Hàng (OrderDetails)
 
 Mục đích: Lưu trữ thông tin chi tiết về các sản phẩm trong mỗi đơn đặt hàng.
+
 OrderDetailID (INT, PRIMARY KEY, AUTO_INCREMENT): Mã định danh duy nhất cho mỗi chi tiết đơn hàng.
+
 OrderID (INT, NOT NULL): Mã định danh của đơn đặt hàng, khóa ngoại tham chiếu tới OrderID trong bảng Orders.
+
 ProductID (INT, NOT NULL): Mã định danh của sản phẩm, khóa ngoại tham chiếu tới ProductID trong bảng Products.
+
 Quantity (INT, NOT NULL): Số lượng sản phẩm trong chi tiết đơn hàng.
+
 UnitPrice (DECIMAL(10, 2), NOT NULL): Giá mỗi đơn vị sản phẩm trong chi tiết đơn hàng.
+
 
 3. Mối quan hệ giữa các bảng
 Products và OrderDetails: Mối quan hệ một-nhiều (1-N). Một sản phẩm có thể xuất hiện trong nhiều chi tiết đơn hàng.
