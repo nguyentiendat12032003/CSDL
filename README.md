@@ -7,48 +7,39 @@ Cuối kỳ, công ty ABC cần kiểm đếm thông tin về doanh số bán h�
 
 Ngoài ra, hệ thống cần có khả năng liên kết thông tin giữa các bảng dữ liệu. Ví dụ, mỗi đơn hàng sẽ liên kết với một mã sản phẩm và một mã nhân viên. Hệ thống cũng cần theo dõi lịch sử các đơn đặt hàng và số lượng sản phẩm tồn kho theo thời gian để giúp công ty ABC dự đoán và quản lý tốt hơn việc tồn kho và doanh số bán hàng.
 
-Yêu cầu trên đề xuất một cơ sở dữ liệu bao gồm ít nhất ba bảng: Bảng "Sản Phẩm" (Product), Bảng "Đơn Đặt Hàng" (Order), và Bảng "Nhân Viên" (Employee). Các bảng này sẽ có các trường tương ứng để lưu trữ thông tin theo yêu cầu của công ty ABC và sẽ có khóa chính để đảm bảo tính duy nhất và ràng buộc dữ liệu.
+Yêu cầu trên đề xuất một cơ sở dữ liệu bao gồm ít nhất ba bảng: Bảng "Sản Phẩm" (Product), Bảng "Đơn Đặt Hàng" (Order), và Bảng "Chi tiết đơn hàng" Order details. Các bảng này sẽ có các trường tương ứng để lưu trữ thông tin theo yêu cầu của công ty ABC và sẽ có khóa chính để đảm bảo tính duy nhất và ràng buộc dữ liệu.
 
-# Thiết kế bảng dữ liệu
-Bảng "Sản Phẩm" (Product):
-- Mã Sản Phẩm (Product ID): Mã duy nhất định danh cho mỗi sản phẩm.
-- Tên Sản Phẩm (Product Name): Tên mô tả sản phẩm.
-- Số Lượng Tồn Kho (Stock Quantity): Số lượng sản phẩm còn lại trong kho.
-- Vị Trí Lưu Trữ (Storage Location): Vị trí cụ thể trong kho mà sản phẩm được lưu trữ.
+1. Giới thiệu
+Hệ thống quản lý doanh số sản phẩm và đơn đặt hàng của công ty ABC được thiết kế để theo dõi các sản phẩm, đơn đặt hàng của khách hàng và chi tiết từng đơn hàng. Hệ thống này sẽ giúp công ty quản lý hiệu quả các sản phẩm, theo dõi doanh số bán hàng và đáp ứng các yêu cầu của khách hàng một cách nhanh chóng.
 
-Bảng "Đơn Đặt Hàng" (Order):
-- Mã Đơn Hàng (Order ID): Mã duy nhất định danh cho mỗi đơn đặt hàng.
-- Mã Sản Phẩm (Product ID): Liên kết đến sản phẩm trong đơn hàng.
-- Mã Nhân Viên (Employee ID): Liên kết đến nhân viên thực hiện đơn hàng.
-- Tên Khách Hàng (Customer Name): Tên của khách hàng đặt hàng.
-- Ngày Đặt Hàng (Order Date): Ngày mà đơn hàng được tạo ra.
-- Số Lượng Sản Phẩm (Quantity): Số lượng của sản phẩm trong đơn hàng.
+2. Các bảng trong cơ sở dữ liệu
+Hệ thống bao gồm ba bảng chính: Products (Sản Phẩm), Orders (Đơn Đặt Hàng), và OrderDetails (Chi Tiết Đơn Hàng).
 
-Bảng "Nhân Viên" (Employee):
-- Mã Nhân Viên (Employee ID): Mã duy nhất định danh cho mỗi nhân viên.
-- Tên Nhân Viên (Employee Name): Tên của nhân viên.
-- Mức Lương (Salary): Mức lương của nhân viên.
+2.1 Bảng Sản Phẩm (Products)
 
-# Mô hình ERD:https://app.diagrams.net/#G10UruruOu5oerjQpg2g79HrNFxxlK95QY#%7B%22pageId%22%3A%22R2lEEEUBdFMjLlhIrx00%22%7D
+Mục đích: Lưu trữ thông tin về các sản phẩm của công ty.
+ProductID (INT, PRIMARY KEY, AUTO_INCREMENT): Mã định danh duy nhất cho mỗi sản phẩm.
+ProductName (VARCHAR(255), NOT NULL): Tên sản phẩm.
+UnitPrice (DECIMAL(10, 2), NOT NULL): Giá mỗi đơn vị sản phẩm.
+Stock (INT, NOT NULL): Số lượng sản phẩm còn trong kho.
 
-# Mối quan hệ và tính ràng buộc giữa các bảng
-Mối quan hệ tính ràng buộc giữa các bảng dữ liệu trong hệ thống quản lý học sinh được mô tả như sau:
+2.2 Bảng Đơn Đặt Hàng (Orders)
 
-Bảng "Sản Phẩm" (Product) và Bảng "Đơn Đặt Hàng" (Order):
+Mục đích: Lưu trữ thông tin về các đơn đặt hàng của khách hàng.
+OrderID (INT, PRIMARY KEY, AUTO_INCREMENT): Mã định danh duy nhất cho mỗi đơn đặt hàng.
+OrderDate (DATE, NOT NULL): Ngày đặt hàng.
+CustomerName (VARCHAR(255), NOT NULL): Tên khách hàng.
+CustomerAddress (VARCHAR(255), NOT NULL): Địa chỉ khách hàng.
 
-Mỗi đơn đặt hàng sẽ liên kết với một hoặc nhiều sản phẩm trong bảng "Đơn Đặt Hàng" thông qua trường "Mã Sản Phẩm" (Product ID).
-Mối quan hệ này là một-nhiều (one-to-many), vì mỗi đơn đặt hàng có thể chứa nhiều sản phẩm khác nhau.
+2.3 Bảng Chi Tiết Đơn Hàng (OrderDetails)
 
-Bảng "Nhân Viên" (Employee) và Bảng "Đơn Đặt Hàng" (Order):
+Mục đích: Lưu trữ thông tin chi tiết về các sản phẩm trong mỗi đơn đặt hàng.
+OrderDetailID (INT, PRIMARY KEY, AUTO_INCREMENT): Mã định danh duy nhất cho mỗi chi tiết đơn hàng.
+OrderID (INT, NOT NULL): Mã định danh của đơn đặt hàng, khóa ngoại tham chiếu tới OrderID trong bảng Orders.
+ProductID (INT, NOT NULL): Mã định danh của sản phẩm, khóa ngoại tham chiếu tới ProductID trong bảng Products.
+Quantity (INT, NOT NULL): Số lượng sản phẩm trong chi tiết đơn hàng.
+UnitPrice (DECIMAL(10, 2), NOT NULL): Giá mỗi đơn vị sản phẩm trong chi tiết đơn hàng.
 
-Mỗi đơn đặt hàng sẽ được gán cho một nhân viên trong bảng "Đơn Đặt Hàng" thông qua trường "Mã Nhân Viên" (Employee ID).
-Mỗi nhân viên có thể có nhiều đơn đặt hàng, vì vậy mối quan hệ này cũng là một-nhiều (one-to-many).
-
-Sự liên kết giữa các bảng:
-
-Mỗi đơn đặt hàng có thông tin về sản phẩm và nhân viên tương ứng thông qua các trường "Mã Sản Phẩm" và "Mã Nhân Viên".
-Điều này cho phép hệ thống kết nối dữ liệu giữa các bảng để truy vấn thông tin liên quan, chẳng hạn như thông tin về đơn đặt hàng, sản phẩm, và nhân viên liên quan đến mỗi đơn hàng cụ thể.
-
-Với các mối quan hệ này, hệ thống có thể hiệu quả theo dõi thông tin về sản phẩm, đơn đặt hàng và nhân viên, và cung cấp các báo cáo và phân tích liên quan đến doanh số bán hàng và quản lý tồn kho.
-
-
+3. Mối quan hệ giữa các bảng
+Products và OrderDetails: Mối quan hệ một-nhiều (1-N). Một sản phẩm có thể xuất hiện trong nhiều chi tiết đơn hàng.
+Orders và Products: Mối quan hệ nhiều-nhiều (N-N), được thể hiện qua bảng OrderDetails. Một đơn đặt hàng có thể chứa nhiều sản phẩm, và một sản phẩm có thể xuất hiện trong nhiều đơn đặt hàng.
